@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import NavItems from "@/components/NavItems";
+import UserDropdown from "@/components/UserDropdown";
 
 const Header = () => {
   return (
@@ -15,10 +16,10 @@ const Header = () => {
             className="h-8 w-auto cursor-pointer"
           />
         </Link>
-        <nav className="nav sm:block">
+        <nav className="hidden sm:block">
           <NavItems />
         </nav>
-        {/* User dropdown components */}
+        <UserDropdown />
       </div>
     </header>
   );
