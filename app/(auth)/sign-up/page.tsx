@@ -59,8 +59,10 @@ const SignUp = () => {
           error={errors.email}
           validation={{
             required: "Email is required",
-            pattern: /^\S+@\S+$/i,
-            message: "Invalid email address",
+            pattern: {
+              value: /^\S+@\S+$/i,
+              message: "Invalid email address",
+            },
           }}
         />
 
@@ -103,7 +105,7 @@ const SignUp = () => {
         />
 
         <SelectField
-          name="prefferedIndustry"
+          name="preferredIndustry"
           label="Preferred Industry"
           placeholder="Select your preffered industry"
           options={PREFERRED_INDUSTRIES}
